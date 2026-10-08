@@ -142,76 +142,76 @@ export default function AiCalculator() {
             </div>
           </div>
 
-          {/* RIGHT: AI Projected Results Card */}
-          <div className="lg:col-span-6 bg-gradient-to-br from-slate-900 via-slate-900 to-emerald-950 text-white border border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl shadow-slate-900/10">
+          {/* RIGHT: Projected Results Card (Clean Light Mode) */}
+          <div className="lg:col-span-6 bg-emerald-50/40 border border-emerald-200/90 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xs">
             <div>
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/10">
+              <div className="flex items-center justify-between pb-4 mb-6 border-b border-emerald-200/60">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-emerald-400" />
-                  <span className="text-xs font-semibold uppercase tracking-wider text-emerald-300">
-                    AI Monthly Impact Projection
+                  <Sparkles className="w-4 h-4 text-emerald-700" />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-emerald-900">
+                    Monthly Impact Projection
                   </span>
                 </div>
-                <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-emerald-500/30">
+                <span className="bg-emerald-100 text-emerald-800 text-[10px] font-semibold px-2.5 py-0.5 rounded-full border border-emerald-300">
                   {netRoiMultiplier}x Estimated ROI
                 </span>
               </div>
 
               {/* Big Impact Metric Headline */}
               <div className="mb-6">
-                <span className="text-xs text-slate-400 font-normal">Total Estimated Monthly Value Unlocked:</span>
-                <div className="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">
-                  +{formatRupiah(totalMonthlyImpact)}
-                  <span className="text-xs font-normal text-emerald-400 ml-2">/ month</span>
+                <span className="text-xs text-slate-500 font-normal">Total Estimated Monthly Value Unlocked:</span>
+                <div className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mt-1">
+                  <span className="text-emerald-700">+{formatRupiah(totalMonthlyImpact)}</span>
+                  <span className="text-xs font-normal text-slate-500 ml-2">/ month</span>
                 </div>
               </div>
 
-              {/* 3 AI Breakdown Cards */}
+              {/* 3 Breakdown Cards */}
               <div className="space-y-3 mb-6">
                 {/* 1. Cash Leakage Prevented */}
-                <div className="bg-white/10 rounded-2xl p-3.5 border border-white/10 flex items-center justify-between gap-3">
+                <div className="bg-white rounded-2xl p-3.5 border border-slate-200/80 shadow-2xs flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
                       <ShieldCheck className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-semibold text-white">Prevented Manual Cash Leakage</div>
-                      <div className="text-[10px] text-slate-400 font-normal">Math & unrecorded order prevention</div>
+                      <div className="text-xs font-semibold text-slate-900">Prevented Manual Cash Leakage</div>
+                      <div className="text-[10px] text-slate-500 font-normal">Math &amp; unrecorded order prevention</div>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-emerald-300 shrink-0">
+                  <span className="text-xs font-bold text-emerald-700 shrink-0">
                     +{formatRupiah(leakageSaved)}
                   </span>
                 </div>
 
                 {/* 2. Staff Time Saved */}
-                <div className="bg-white/10 rounded-2xl p-3.5 border border-white/10 flex items-center justify-between gap-3">
+                <div className="bg-white rounded-2xl p-3.5 border border-slate-200/80 shadow-2xs flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-xl bg-teal-500/20 flex items-center justify-center text-teal-300 shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0">
                       <Clock className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-semibold text-white">Staff Productive Hours Saved</div>
-                      <div className="text-[10px] text-slate-400 font-normal">15s checkout & auto WhatsApp alert</div>
+                      <div className="text-xs font-semibold text-slate-900">Staff Productive Hours Saved</div>
+                      <div className="text-[10px] text-slate-500 font-normal">15s checkout &amp; auto WhatsApp alert</div>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-teal-300 shrink-0">
+                  <span className="text-xs font-bold text-teal-700 shrink-0">
                     {hoursSaved} Hours / mo
                   </span>
                 </div>
 
-                {/* 3. AI Retargeting Repeat Boost */}
-                <div className="bg-white/10 rounded-2xl p-3.5 border border-white/10 flex items-center justify-between gap-3">
+                {/* 3. Retargeting Repeat Boost */}
+                <div className="bg-white rounded-2xl p-3.5 border border-slate-200/80 shadow-2xs flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-xl bg-indigo-500/20 flex items-center justify-center text-indigo-300 shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0">
                       <TrendingUp className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-semibold text-white">Repeat Customer Growth</div>
-                      <div className="text-[10px] text-slate-400 font-normal">Automated VIP reminders & vouchers</div>
+                      <div className="text-xs font-semibold text-slate-900">Repeat Customer Growth</div>
+                      <div className="text-[10px] text-slate-500 font-normal">Automated VIP reminders &amp; vouchers</div>
                     </div>
                   </div>
-                  <span className="text-xs font-bold text-indigo-300 shrink-0">
+                  <span className="text-xs font-bold text-indigo-700 shrink-0">
                     +{formatRupiah(repeatBoost)}
                   </span>
                 </div>
@@ -219,14 +219,14 @@ export default function AiCalculator() {
             </div>
 
             {/* Direct WhatsApp CTA Button */}
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-4 border-t border-emerald-200/70">
               <a
                 href={`https://wa.me/6281996307784?text=${encodeURIComponent(
                   `Hello Jipo POS Team, I simulated my store handling ${dailyKg}kg/day across ${branches} store(s). I want to activate Jipo POS and claim free setup!`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs text-center shadow-md transition-all active:scale-[0.98]"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs text-center shadow-sm hover:shadow transition-all active:scale-[0.98]"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Claim Free Setup for {dailyKg}kg/day Store</span>

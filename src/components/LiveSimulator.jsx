@@ -407,21 +407,21 @@ export default function LiveSimulator() {
                   type="button"
                   onClick={handleProcessOrder}
                   disabled={isSendingSync}
-                  className="group relative flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white transition-all active:scale-[0.98] shadow-md hover:shadow-xl hover:shadow-emerald-600/20 disabled:opacity-50 border border-emerald-500 text-left cursor-pointer btn-glow"
+                  className="group relative flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-emerald-700 hover:bg-emerald-800 text-white transition-all active:scale-[0.98] shadow-sm hover:shadow disabled:opacity-50 border border-emerald-700 text-left cursor-pointer"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
+                  <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                     <Send className="w-4 h-4 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-1.5 mb-0.5">
-                      <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-800/60 px-1.5 py-0.5 rounded text-emerald-100">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider bg-emerald-900/50 px-1.5 py-0.5 rounded text-emerald-100">
                         Step 1
                       </span>
                       <span className="text-xs sm:text-sm font-semibold text-white truncate">
                         Save &amp; Send Receipt
                       </span>
                     </div>
-                    <p className="text-[11px] text-emerald-100/80 font-normal truncate">
+                    <p className="text-[11px] text-emerald-100/90 font-normal truncate">
                       Auto-send WhatsApp receipt
                     </p>
                   </div>
@@ -431,21 +431,21 @@ export default function LiveSimulator() {
                   type="button"
                   onClick={handleCompleteOrder}
                   disabled={isSendingSync}
-                  className="group relative flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white transition-all active:scale-[0.98] shadow-md hover:shadow-xl hover:shadow-slate-900/20 disabled:opacity-50 border border-slate-800 text-left cursor-pointer"
+                  className="group relative flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl bg-white hover:bg-emerald-50/60 text-slate-800 transition-all active:scale-[0.98] shadow-2xs hover:shadow-xs disabled:opacity-50 border border-slate-200 hover:border-emerald-300 text-left cursor-pointer"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform border border-emerald-500/30">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform border border-emerald-200">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-700" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-1.5 mb-0.5">
-                      <span className="text-[10px] font-bold uppercase tracking-wider bg-slate-800 px-1.5 py-0.5 rounded text-slate-300">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded">
                         Step 2
                       </span>
-                      <span className="text-xs sm:text-sm font-semibold text-white truncate">
+                      <span className="text-xs sm:text-sm font-semibold text-slate-900 truncate">
                         Mark Order Ready
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-400 font-normal truncate">
+                    <p className="text-[11px] text-slate-500 font-normal truncate">
                       Notify customer laundry is ready
                     </p>
                   </div>
