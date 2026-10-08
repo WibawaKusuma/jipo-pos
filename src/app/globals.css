@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FAFAFA;
+  --foreground: #09090B;
+  --primary: #059669;
+  --primary-glow: rgba(16, 185, 129, 0.35);
+  --accent-lime: #84CC16;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FAFAFA;
+  color: #09090B;
+  font-family: var(--font-poppins), sans-serif;
+  scroll-behavior: smooth;
 }
+
+/* Atomato-Style Light Tech Grid Pattern */
+.atomato-grid-bg {
+  background-image: 
+    radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.atomato-mesh-bg {
+  background-color: #FAFAFA;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+    radial-gradient(at 85% 20%, rgba(14, 165, 233, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(132, 204, 22, 0.06) 0px, transparent 50%),
+    radial-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+}
+
+/* Atomato Headline Gradient Highlight */
+.atomato-gradient-text {
+  background: linear-gradient(135deg, #059669 0%, #0D9488 50%, #65A30D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.atomato-pill-glow {
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.35), 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.atomato-pill-glow:hover {
+  box-shadow: 0 0 35px rgba(16, 185, 129, 0.5), 0 6px 18px rgba(16, 185, 129, 0.25);
+}
+
+.atomato-card-glow {
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.06), 0 0 0 1px rgba(226, 232, 240, 0.9);
+}
+
+.atomato-card-glow:hover {
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.1), 0 0 0 1px rgba(16, 185, 129, 0.3);
+}
+
+/* Button Shimmer Animation */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: rotate(30deg);
+  animation: shine 4s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-150%) rotate(30deg); }
+  30%, 100% { transform: translateX(150%) rotate(30deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 4s ease-in-out 2s infinite;
+}
+
