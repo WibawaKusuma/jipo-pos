@@ -47,6 +47,10 @@ export default function LiveSimulator() {
   const [isSendingSync, setIsSendingSync] = useState(false);
   const [notificationToast, setNotificationToast] = useState(null);
 
+  // Live AI WhatsApp Playground State
+  const [activeAiQuery, setActiveAiQuery] = useState(null);
+  const [isAiReplying, setIsAiReplying] = useState(false);
+
   const availableServices = [
     { name: "Wash & Iron Regular", price: 8000, unit: "kg", icon: "👕", category: "Kiloan", defaultQty: 4 },
     { name: "King Bed Cover", price: 30000, unit: "pcs", icon: "🛏️", category: "Satuan", defaultQty: 1 },
@@ -99,6 +103,8 @@ export default function LiveSimulator() {
     setIsOrderProcessed(true);
     setIsOrderCompleted(false);
     setNotificationToast(null);
+    setActiveAiQuery(null);
+    setIsAiReplying(false);
   };
 
   const triggerToast = (msg) => {
@@ -125,6 +131,15 @@ export default function LiveSimulator() {
       setIsOrderCompleted(true);
       triggerToast("✨ WhatsApp Alert: Your Laundry is READY for Pickup!");
     }, 400);
+  };
+
+  const handleTriggerAiReply = (type) => {
+    setActiveAiQuery(type);
+    setIsAiReplying(true);
+    setTimeout(() => {
+      setIsAiReplying(false);
+      triggerToast("🤖 Jipo AI WhatsApp: Automated customer reply sent!");
+    }, 600);
   };
 
   return (
@@ -676,6 +691,82 @@ export default function LiveSimulator() {
                         </div>
                       </div>
                     )}
+
+                    {/* Interactive Customer Inquiry (Triggered by AI Prompts) */}
+                    {activeAiQuery && (
+                      <div className="flex justify-end animate-in fade-in slide-in-from-bottom-2 duration-300">
+                        <div className="bg-[#E7FFDB] text-slate-800 rounded-2xl rounded-tr-sm p-3 shadow-xs border border-emerald-200 max-w-[88%] text-[11px] space-y-1">
+                          <p>
+                            {activeAiQuery === "status" && "Halo admin, cucian atas nama Maya #JP-091 kira-kira selesai jam berapa ya?"}
+                            {activeAiQuery === "delivery" && "Min, bisa tolong jadwalkan antar ke rumah saya jam 17:00 sore ini?"}
+                            {activeAiQuery === "promo" && "Halo Jipo, ada promo voucher diskon untuk cucian kiloan minggu ini?"}
+                          </p>
+                          <div className="text-[9px] text-slate-400 text-right flex items-center justify-end gap-1">
+                            <span>10:18</span>
+                            <CheckCheck className="w-3 h-3 text-[#53bdeb]" />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* AI Smart Assistant Automated Response */}
+                    {activeAiQuery && (
+                      <div className="bg-white rounded-2xl rounded-tl-sm p-3.5 shadow-sm border border-emerald-300/80 max-w-[94%] space-y-2 text-slate-800 animate-in fade-in slide-in-from-bottom-2 duration-300">
+                        <div className="flex items-center justify-between border-b border-slate-100 pb-1.5">
+                          <div className="flex items-center gap-1.5 font-bold text-teal-800 text-[10px]">
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                            <span>JIPO AI CONCIERGE (24/7 AUTO-REPLY)</span>
+                          </div>
+                          <span className="text-[9px] font-semibold bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded">
+                            Instant AI
+                          </span>
+                        </div>
+
+                        {isAiReplying ? (
+                          <div className="flex items-center gap-1.5 py-2 text-slate-400 text-xs">
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-bounce" />
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-bounce delay-100" />
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-bounce delay-200" />
+                            <span className="text-[10px] text-slate-500 ml-1">Jipo AI is generating reply...</span>
+                          </div>
+                        ) : (
+                          <>
+                            {activeAiQuery === "status" && (
+                              <div className="text-[11px] text-slate-700 space-y-1">
+                                <p>Halo Kak <strong>{customerName}</strong>! Pesanan <strong>#JP-2026-091</strong> saat ini di tahap <strong>Ironing (Penyetrikaan)</strong>.</p>
+                                <p className="bg-slate-50 p-2 rounded-lg text-[10px] border border-slate-100 text-slate-600">
+                                  ⚡ Estimasi selesai: <strong>Hari ini, 16:00 WIB</strong> di Rak A-03. Kami kirim notifikasi otomatis saat siap!
+                                </p>
+                              </div>
+                            )}
+
+                            {activeAiQuery === "delivery" && (
+                              <div className="text-[11px] text-slate-700 space-y-1">
+                                <p>Siap Kak <strong>{customerName}</strong>! Jadwal antar jemput pukul <strong>17:00 WIB</strong> telah dicatat otomatis oleh sistem.</p>
+                                <p className="bg-emerald-50 p-2 rounded-lg text-[10px] border border-emerald-100 text-emerald-800">
+                                  🛵 Kurir ditugaskan: <strong>Rian Express</strong>. Live status: jipopos.com/track/JP-091
+                                </p>
+                              </div>
+                            )}
+
+                            {activeAiQuery === "promo" && (
+                              <div className="text-[11px] text-slate-700 space-y-1">
+                                <p>Tentu ada Kak! Karena Kak <strong>{customerName}</strong> adalah <strong>VIP Member</strong>, ini voucher eksklusif Anda:</p>
+                                <div className="bg-amber-50 p-2 rounded-lg text-[10px] border border-amber-200 text-amber-900 font-bold flex justify-between items-center">
+                                  <span>🎟️ KODE: JIPOWEEKEND</span>
+                                  <span className="bg-amber-200 text-amber-900 px-1.5 py-0.5 rounded text-[9px]">Diskon Rp 10.000</span>
+                                </div>
+                              </div>
+                            )}
+
+                            <div className="text-[9px] text-slate-400 text-right flex items-center justify-end gap-1 pt-0.5">
+                              <span>10:18</span>
+                              <CheckCheck className="w-3.5 h-3.5 text-[#53bdeb]" />
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    )}
                   </div>
 
                   {/* WhatsApp Bottom Reply Bar Mock */}
@@ -699,12 +790,55 @@ export default function LiveSimulator() {
               </div>
             </div>
 
-            {/* Device Caption Note */}
-            <div className="mt-4 text-center">
-              <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 font-medium bg-white px-3.5 py-1 rounded-full border border-slate-200 shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                Live Customer Phone View (Simulated)
-              </span>
+            {/* Interactive AI Customer Prompts Bar */}
+            <div className="mt-4 w-full max-w-[360px] bg-white rounded-2xl p-3 border border-slate-200/90 shadow-xs space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[11px] font-semibold text-slate-800 flex items-center gap-1.5">
+                  <Sparkles className="w-3 h-3 text-emerald-600" />
+                  <span>Test 24/7 AI WhatsApp Bot:</span>
+                </span>
+                <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200">
+                  Click to Ask AI
+                </span>
+              </div>
+
+              <div className="grid grid-cols-3 gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => handleTriggerAiReply("status")}
+                  className={`p-1.5 rounded-lg text-[10px] font-semibold border transition-all text-center cursor-pointer ${
+                    activeAiQuery === "status"
+                      ? "bg-emerald-600 text-white border-emerald-600 shadow-xs"
+                      : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100"
+                  }`}
+                >
+                  📍 Order Status
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleTriggerAiReply("delivery")}
+                  className={`p-1.5 rounded-lg text-[10px] font-semibold border transition-all text-center cursor-pointer ${
+                    activeAiQuery === "delivery"
+                      ? "bg-emerald-600 text-white border-emerald-600 shadow-xs"
+                      : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100"
+                  }`}
+                >
+                  🛵 Pick-Up Time
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleTriggerAiReply("promo")}
+                  className={`p-1.5 rounded-lg text-[10px] font-semibold border transition-all text-center cursor-pointer ${
+                    activeAiQuery === "promo"
+                      ? "bg-emerald-600 text-white border-emerald-600 shadow-xs"
+                      : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100"
+                  }`}
+                >
+                  🎟️ Promo Code
+                </button>
+              </div>
             </div>
           </div>
         </div>

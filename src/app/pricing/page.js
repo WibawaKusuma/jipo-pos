@@ -1,4 +1,5 @@
 import PricingSection from "@/components/PricingSection";
+import AiCalculator from "@/components/AiCalculator";
 import OnboardingSteps from "@/components/OnboardingSteps";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -16,7 +17,7 @@ export default function PricingPage() {
           Transparent Pricing
         </span>
         <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight mb-4">
-          Fair, Predictable Plans for Single Stores & Chains
+          Fair, Predictable Plans for Single Stores &amp; Chains
         </h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
           No hidden fees, no contract lock-ins. Pick monthly cloud access or buy once for a lifetime.
@@ -24,6 +25,7 @@ export default function PricingPage() {
       </div>
 
       <PricingSection />
+      <AiCalculator />
       <OnboardingSteps />
       <FAQSection />
       <FinalCTA />
