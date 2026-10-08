@@ -226,7 +226,7 @@ export default function AiCalculator() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs text-center shadow-lg shadow-emerald-600/30 transition-all active:scale-95 btn-glow"
+                className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs text-center shadow-md transition-all active:scale-[0.98]"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Claim Free Setup for {dailyKg}kg/day Store</span>

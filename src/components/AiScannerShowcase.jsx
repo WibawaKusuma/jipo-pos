@@ -184,9 +184,9 @@ export default function AiScannerShowcase() {
                     <div className="bg-white/10 p-2.5 rounded-xl border border-emerald-500/40 flex items-start justify-between gap-2">
                       <div>
                         <div className="font-semibold text-emerald-300">✓ Fabric Detected: 100% Linen / Silk</div>
-                        <div className="text-[10px] text-slate-300 font-normal">Recommended Cycle: Delicate 30°C Cold Wash</div>
+                        <div className="text-[11px] text-slate-300 font-normal">Recommended Cycle: Delicate 30°C Cold Wash</div>
                       </div>
-                      <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded">
+                      <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold px-2 py-0.5 rounded">
                         98.7% Conf.
                       </span>
                     </div>
@@ -194,9 +194,9 @@ export default function AiScannerShowcase() {
                     <div className="bg-white/10 p-2.5 rounded-xl border border-amber-500/40 flex items-start justify-between gap-2">
                       <div>
                         <div className="font-semibold text-amber-300">⚠️ Pre-Existing Collar Discoloration</div>
-                        <div className="text-[10px] text-slate-300 font-normal">Condition stamped to WhatsApp receipt #JP-091</div>
+                        <div className="text-[11px] text-slate-300 font-normal">Condition stamped to WhatsApp receipt #JP-091</div>
                       </div>
-                      <span className="bg-amber-500/20 text-amber-300 text-[9px] font-bold px-1.5 py-0.5 rounded">
+                      <span className="bg-amber-500/20 text-amber-300 text-[10px] font-semibold px-2 py-0.5 rounded">
                         Defect Logged
                       </span>
                     </div>
@@ -206,9 +206,9 @@ export default function AiScannerShowcase() {
                     <div className="bg-white/10 p-2.5 rounded-xl border border-emerald-500/40 flex items-start justify-between gap-2">
                       <div>
                         <div className="font-semibold text-emerald-300">✓ Upper Material: Suede / Mesh Blend</div>
-                        <div className="text-[10px] text-slate-300 font-normal">Treatment: Soft Horsehair Brush + Foam Care</div>
+                        <div className="text-[11px] text-slate-300 font-normal">Treatment: Soft Horsehair Brush + Foam Care</div>
                       </div>
-                      <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded">
+                      <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold px-2 py-0.5 rounded">
                         99.2% Conf.
                       </span>
                     </div>
@@ -216,9 +216,9 @@ export default function AiScannerShowcase() {
                     <div className="bg-white/10 p-2.5 rounded-xl border border-amber-500/40 flex items-start justify-between gap-2">
                       <div>
                         <div className="font-semibold text-amber-300">⚠️ Midsole Oxidation &amp; Mud Scuffs</div>
-                        <div className="text-[10px] text-slate-300 font-normal">Pre-treatment condition photo sent to customer</div>
+                        <div className="text-[11px] text-slate-300 font-normal">Pre-treatment condition photo sent to customer</div>
                       </div>
-                      <span className="bg-amber-500/20 text-amber-300 text-[9px] font-bold px-1.5 py-0.5 rounded">
+                      <span className="bg-amber-500/20 text-amber-300 text-[10px] font-semibold px-2 py-0.5 rounded">
                         Photo Saved
                       </span>
                     </div>

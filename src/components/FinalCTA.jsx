@@ -37,7 +37,7 @@ export default function FinalCTA() {
                 href="https://wa.me/6281996307784?text=Hello%20Jipo%20POS%20Team,%20I%20am%20ready%20to%20get%20free%20setup%20assistance"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:shadow-[0_0_35px_rgba(16,185,129,0.5)] transition-all active:scale-95 btn-glow"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-lg shadow-emerald-950/20 transition-all active:scale-[0.98]"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Claim Free Concierge Setup</span>

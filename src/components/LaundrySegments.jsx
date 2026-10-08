@@ -69,35 +69,50 @@ export default function LaundrySegments() {
             return (
               <div
                 key={idx}
-                className={`rounded-3xl p-7 sm:p-8 border transition-all flex flex-col justify-between ${
+                className={`rounded-3xl p-6 sm:p-7 border transition-all flex flex-col justify-between overflow-hidden ${
                   seg.featured
-                    ? "bg-white border-emerald-300 ring-2 ring-emerald-500/20 shadow-xl shadow-emerald-600/5"
-                    : "bg-white border-slate-200/80 atomato-card-glow"
+                    ? "bg-white border-emerald-400 ring-2 ring-emerald-500/20 shadow-xl shadow-slate-900/5"
+                    : "bg-white border-slate-200/80 shadow-2xs hover:shadow-md"
                 }`}
               >
                 <div>
-                  <div className="flex items-center justify-between mb-5">
+                  {seg.featured && (
+                    <div className="relative rounded-2xl overflow-hidden mb-5 border border-slate-200 aspect-[16/10]">
+                      <img
+                        src="/images/sneaker_care_workshop.jpg"
+                        alt="Artisanal sneaker and specialty dry clean workshop"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute top-2.5 left-2.5 bg-slate-900/90 text-white text-[10px] font-semibold px-2.5 py-0.5 rounded-full backdrop-blur-sm">
+                        ✨ High-Ticket Care
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between mb-4">
                     <span className="text-[10px] font-medium uppercase tracking-wider bg-slate-100 text-slate-700 px-3 py-1 rounded-full">
                       {seg.tag}
                     </span>
-                    <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                    <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
                       {seg.badge}
                     </span>
                   </div>
 
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-5 shadow-2xs">
-                    <Icon className="w-6 h-6" />
-                  </div>
+                  {!seg.featured && (
+                    <div className="w-11 h-11 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 shadow-2xs">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                  )}
 
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">{seg.title}</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-6 font-normal">{seg.desc}</p>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-1.5">{seg.title}</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed mb-5 font-normal">{seg.desc}</p>
                 </div>
 
                 <div className="pt-4 border-t border-slate-100">
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-2">
                     {seg.bullets.map((b, bIdx) => (
                       <li key={bIdx} className="flex items-start gap-2 text-xs text-slate-700 font-medium">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0 mt-0.5" />
                         <span>{b}</span>
                       </li>
                     ))}

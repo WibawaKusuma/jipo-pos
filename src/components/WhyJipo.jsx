@@ -34,7 +34,7 @@ export default function WhyJipo() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-2">White-Glove Price List Setup</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">White-Glove Price List Setup</h3>
               <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
                 Don&apos;t waste hours typing dozens of services and price tiers. Send us a photo of your menu, and our concierge team inputs everything into your cloud account.
               </p>
@@ -43,7 +43,7 @@ export default function WhyJipo() {
               <div className="bg-white rounded-2xl p-3.5 border border-slate-200/80 shadow-xs space-y-2 mb-6">
                 <div className="flex items-center justify-between text-xs">
                   <span className="font-semibold text-slate-800">📸 Menu Photo Uploaded</span>
-                  <span className="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded text-[10px]">Verified</span>
+                  <span className="text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded text-[10px]">Verified</span>
                 </div>
                 <div className="text-[11px] text-slate-500 bg-slate-50 p-2 rounded-lg border border-slate-100">
                   ⚡ 24 Price Tiers & Kilo Rules auto-configured by Jipo Team
@@ -74,7 +74,7 @@ export default function WhyJipo() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Automated WhatsApp Receipts</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Automated WhatsApp Receipts</h3>
               <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
                 Deliver instant order receipts, pickup alerts, and uncollected laundry reminders with one tap. No need for cashiers to save customer numbers on personal phones.
               </p>
@@ -83,7 +83,7 @@ export default function WhyJipo() {
               <div className="bg-white rounded-2xl p-3.5 border border-slate-200/80 shadow-xs space-y-2 mb-6">
                 <div className="flex items-center justify-between text-xs">
                   <span className="font-semibold text-slate-800">💬 Customer Alert Sent</span>
-                  <span className="text-teal-700 font-bold bg-teal-50 px-2 py-0.5 rounded text-[10px]">1.2s Delivery</span>
+                  <span className="text-teal-700 font-semibold bg-teal-50 px-2 py-0.5 rounded text-[10px]">1.2s Delivery</span>
                 </div>
                 <div className="text-[11px] text-slate-500 bg-slate-50 p-2 rounded-lg border border-slate-100">
                   &ldquo;Laundry #JP-091 is washed & ready in Rack A-03.&rdquo;
@@ -114,7 +114,7 @@ export default function WhyJipo() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Universal Bluetooth Printing</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Universal Bluetooth Printing</h3>
               <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
                 Works seamlessly with standard 58mm / 80mm wireless thermal printers. Use your existing Android phone, iPad, tablet, or Windows computer without buying expensive POS hardware.
               </p>
@@ -155,7 +155,7 @@ export default function WhyJipo() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Free Staff Training & 1-on-1 Support</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Free Staff Training & 1-on-1 Support</h3>
               <p className="text-sm text-slate-600 leading-relaxed mb-6 font-normal">
                 Hiring new staff? Our team provides guided video walkthroughs and dedicated WhatsApp support so any cashier can master the checkout workflow in under 10 minutes.
               </p>

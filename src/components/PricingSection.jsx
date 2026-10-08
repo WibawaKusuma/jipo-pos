@@ -229,10 +229,10 @@ export default function PricingSection() {
                   href={`https://wa.me/6281996307784?text=${encodeURIComponent(plan.waText)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full font-semibold text-xs text-center transition-all ${
+                  className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full font-semibold text-xs text-center transition-all active:scale-[0.98] ${
                     plan.popular
-                      ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_20px_rgba(16,185,129,0.35)] btn-glow"
-                      : "bg-white hover:bg-slate-100 text-slate-800 border border-slate-300"
+                      ? "bg-emerald-700 hover:bg-emerald-800 text-white shadow-sm hover:shadow"
+                      : "bg-white hover:bg-slate-50 text-slate-800 border border-slate-300"
                   }`}
                 >
                   <span>{plan.btnText}</span>
@@ -291,10 +291,10 @@ export default function PricingSection() {
                   href={`https://wa.me/6281996307784?text=${encodeURIComponent(plan.waText)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full font-semibold text-xs text-center transition-all ${
+                  className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-full font-semibold text-xs text-center transition-all active:scale-[0.98] ${
                     plan.popular
-                      ? "bg-indigo-600 hover:bg-indigo-500 text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] btn-glow"
-                      : "bg-white hover:bg-slate-100 text-slate-800 border border-slate-300"
+                      ? "bg-slate-900 hover:bg-slate-800 text-white shadow-sm hover:shadow"
+                      : "bg-white hover:bg-slate-50 text-slate-800 border border-slate-300"
                   }`}
                 >
                   <span>{plan.btnText}</span>

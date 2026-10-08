@@ -1,165 +1,123 @@
 import Link from "next/link";
-import { MessageCircle, Play, CheckCircle2, Zap, ArrowUpRight, Star } from "lucide-react";
+import Image from "next/image";
+import { MessageCircle, Play, CheckCircle2, Zap, ArrowUpRight, Star, ShieldCheck, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden atomato-mesh-bg">
+    <section className="relative pt-6 pb-16 md:pt-10 md:pb-24 overflow-hidden bg-subtle-grid">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Top Centered Content */}
-        <div className="text-center max-w-3xl mx-auto flex flex-col items-center">
+        {/* Split Grid Hero: Left Copy, Right Authentic Photography */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Atomato-Style Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold uppercase tracking-wider mb-6 shadow-2xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>• POS & OPERATIONS PLATFORM FOR MODERN LAUNDRIES</span>
-          </div>
-
-          {/* Atomato-Style Bold Headline with Highlighted Gradient */}
-          <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold text-slate-900 tracking-tight leading-[1.15] mb-6">
-            Run your laundry with <br className="hidden sm:inline" />
-            <span className="atomato-gradient-text">15s checkout & zero headaches</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl font-normal">
-            The complete cloud POS designed by experienced laundry operators. Featuring automated WhatsApp receipts, flexible member discounts, multi-branch control, and <strong>100% free white-glove setup assistance</strong>.
-          </p>
-
-          {/* Dual Action Pill Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto mb-10">
-            <a
-              href="https://wa.me/6281996307784?text=Hello%20Jipo%20POS%20Team,%20I%20want%20help%20setting%20up%20my%20laundry%20app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:shadow-[0_0_35px_rgba(16,185,129,0.5)] transition-all active:scale-95 btn-glow"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Book Free Concierge Setup</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-
-            <Link
-              href="/demo"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white border border-slate-300 hover:border-emerald-500 text-slate-800 hover:text-emerald-700 font-semibold text-sm shadow-xs hover:shadow-md transition-all active:scale-95"
-            >
-              <Play className="w-4 h-4 text-emerald-600 fill-emerald-600" />
-              <span>Try Interactive Demo</span>
-            </Link>
-          </div>
-
-          {/* Social Proof & Guarantee Pill Bar */}
-          <div className="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-6 py-2 px-5 rounded-full bg-white/80 border border-slate-200/80 shadow-2xs text-xs text-slate-600 mb-12 font-medium">
-            <div className="flex items-center gap-1 text-amber-500 font-semibold">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <span className="text-slate-800 ml-1">5.0 / 5.0 Rating</span>
-            </div>
-            <span className="hidden sm:inline text-slate-300">•</span>
-            <div className="flex items-center gap-1.5 font-medium">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Free Initial Price List Setup</span>
-            </div>
-            <span className="hidden sm:inline text-slate-300">•</span>
-            <div className="flex items-center gap-1.5 font-medium">
-              <Zap className="w-3.5 h-3.5 text-emerald-600" />
-              <span>No Hardware Lock-in</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Atomato-Style Layered Hero Bento Display */}
-        <div className="relative rounded-3xl bg-gradient-to-b from-slate-100/90 to-slate-200/50 p-3 sm:p-5 border border-slate-200/90 shadow-2xl shadow-slate-300/40">
-          
-          {/* Top Window Bar */}
-          <div className="flex items-center justify-between px-3 py-2 bg-white/90 rounded-2xl border border-slate-200/80 mb-3 text-xs text-slate-500">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-              <span className="ml-2 font-mono text-[11px] text-slate-400">app.jipopos.com/pos/station-01</span>
-            </div>
-            <div className="flex items-center gap-2 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              Live Cashier & WhatsApp Gateway Sync
-            </div>
-          </div>
-
-          {/* Bento Preview Grid Inside Hero */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-3.5">
+          {/* LEFT: Copy & CTA */}
+          <div className="lg:col-span-6 flex flex-col items-start text-left">
             
-            {/* Bento Card 1: Fast POS Order Input */}
-            <div className="md:col-span-7 bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
-                  <div>
-                    <span className="text-[10px] font-semibold uppercase text-emerald-700 tracking-wider">Fast Checkout Engine</span>
-                    <h3 className="font-bold text-sm text-slate-900">3-Click Laundry Dropoff</h3>
-                  </div>
-                  <span className="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2.5 py-1 rounded-full">
-                    15s / Transaction
-                  </span>
-                </div>
+            {/* Grounded Category Pill */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium tracking-wide mb-6">
+              <span className="w-2 h-2 rounded-full bg-emerald-600" />
+              <span>Modern POS &amp; Operations for Laundromats</span>
+            </div>
 
-                <div className="grid grid-cols-2 gap-2 mb-3">
-                  <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-2.5 flex items-center justify-between">
-                    <div className="text-xs font-semibold text-slate-800">👕 Wash & Iron (4kg)</div>
-                    <span className="text-xs font-bold text-emerald-700">Rp 32.000</span>
-                  </div>
-                  <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-2.5 flex items-center justify-between">
-                    <div className="text-xs font-semibold text-slate-800">🛏️ King Bed Cover</div>
-                    <span className="text-xs font-bold text-emerald-700">Rp 30.000</span>
-                  </div>
+            {/* Authoritative B2B Headline */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-slate-900 tracking-tight leading-[1.15] mb-5">
+              Run your laundry operations with <span className="text-emerald-700">speed, clarity &amp; zero chaos.</span>
+            </h1>
+
+            {/* Grounded Subtitle */}
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8 font-normal">
+              Built specifically for wash &amp; fold, dry cleaning, sneaker care, and multi-branch chains. Enjoy 15-second customer checkout, automated WhatsApp receipts, and <strong>100% white-glove setup assistance</strong> by our team.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-8">
+              <a
+                href="https://wa.me/6281996307784?text=Hello%20Jipo%20POS%20Team,%20I%20want%20help%20setting%20up%20my%20laundry%20app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs sm:text-sm shadow-md transition-all active:scale-95"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>Book Free Concierge Setup</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+
+              <Link
+                href="/demo"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white border border-slate-300 hover:border-slate-400 text-slate-800 font-semibold text-xs sm:text-sm shadow-2xs hover:bg-slate-50 transition-all active:scale-95"
+              >
+                <Play className="w-3.5 h-3.5 text-emerald-700 fill-emerald-700" />
+                <span>Try Live Demo</span>
+              </Link>
+            </div>
+
+            {/* Trust Markers */}
+            <div className="pt-6 border-t border-slate-200/80 w-full flex flex-wrap items-center gap-y-2 gap-x-5 text-xs text-slate-600 font-medium">
+              <div className="flex items-center gap-1 text-amber-500">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <span className="text-slate-800 ml-1 font-semibold">5.0 / 5.0</span>
+              </div>
+              <span className="text-slate-300">•</span>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
+                <span>Free Initial Price List Setup</span>
+              </div>
+              <span className="text-slate-300">•</span>
+              <div className="flex items-center gap-1.5">
+                <Zap className="w-3.5 h-3.5 text-emerald-700" />
+                <span>Runs on Any Phone/Tablet</span>
+              </div>
+            </div>
+
+          </div>
+
+          {/* RIGHT: Real Commercial Photography with Floating Micro-UI Badges */}
+          <div className="lg:col-span-6 relative">
+            <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-900/5 bg-slate-100">
+              <img
+                src="/images/hero_laundry_pos.jpg"
+                alt="Modern Jipo POS laundry counter with tablet stand and organized clean linen"
+                className="w-full h-auto object-cover transform hover:scale-[1.01] transition-transform duration-500"
+              />
+
+              {/* Subtle Gradient Vignette at bottom */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+
+              {/* Floating Badge 1: 15s Fast Checkout */}
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3 border border-slate-200/80 shadow-md flex items-center gap-2.5 sm:gap-3 max-w-[190px] sm:max-w-none">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0">
+                  ⚡
+                </div>
+                <div>
+                  <div className="text-[11px] sm:text-xs font-semibold text-slate-900 leading-tight">15s Customer Checkout</div>
+                  <div className="text-[9px] sm:text-[10px] text-slate-500 font-normal">3-tap drop-off &amp; barcode tag</div>
                 </div>
               </div>
 
-              {/* Promo & Terms pill tags */}
-              <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-                <div className="flex gap-1.5">
-                  <span className="bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-semibold px-2 py-0.5 rounded-full">
-                    VIP Member (-10%)
-                  </span>
-                  <span className="bg-emerald-50 text-emerald-800 border border-emerald-200 text-[10px] font-semibold px-2 py-0.5 rounded-full">
-                    50% DP Accepted
-                  </span>
+              {/* Floating Badge 2: Real-time WhatsApp Notification */}
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 bg-slate-900/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-3 border border-slate-800 text-white shadow-lg flex items-center gap-2.5 sm:gap-3 max-w-[210px] sm:max-w-[280px]">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-[#25D366]/20 text-[#25D366] flex items-center justify-center font-bold text-xs shrink-0">
+                  💬
                 </div>
-                <div className="font-bold text-slate-900 text-sm">
-                  Total: <span className="text-emerald-700">Rp 55.800</span>
+                <div className="min-w-0">
+                  <div className="text-[11px] sm:text-xs font-semibold text-white leading-tight truncate">WhatsApp Receipt Sent</div>
+                  <div className="text-[9px] sm:text-[10px] text-slate-300 font-normal truncate">Auto-dispatched with shelf slot #03</div>
                 </div>
               </div>
             </div>
 
-            {/* Bento Card 2: Live WhatsApp Receipt Notification */}
-            <div className="md:col-span-5 bg-gradient-to-br from-emerald-950 to-slate-900 text-white rounded-2xl p-5 border border-slate-800 shadow-xs flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between pb-2.5 border-b border-white/10 mb-3">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-xs">
-                      💬
-                    </div>
-                    <span className="text-xs font-bold text-white">Instant WhatsApp Receipt</span>
-                  </div>
-                  <span className="text-[10px] bg-emerald-500/20 text-emerald-300 font-semibold px-2 py-0.5 rounded-full">
-                    Auto-Sent
-                  </span>
-                </div>
-
-                <div className="bg-white/10 rounded-xl p-3 text-[11px] space-y-1 text-slate-200 border border-white/10">
-                  <p className="font-bold text-emerald-300">🧺 Laundry Order #JP-2026-091</p>
-                  <p className="text-slate-300 text-[10px]">Customer: Maya Pratiwi (Paid in Full)</p>
-                  <p className="text-slate-400 text-[10px]">Est. Ready: Tomorrow, 4:00 PM</p>
-                </div>
-              </div>
-
-              <div className="pt-2 text-[10px] text-slate-400 flex items-center justify-between">
-                <span>✓✓ Delivered in 1.2s</span>
-                <span className="text-emerald-400 font-medium">99.4% Read Rate</span>
-              </div>
+            {/* Micro Caption */}
+            <div className="mt-3 text-center lg:text-left">
+              <span className="text-[11px] text-slate-500 font-normal">
+                ✓ Commercial cloud POS deployed across single-store laundromats &amp; 10+ branch chains.
+              </span>
             </div>
           </div>
+
         </div>
 
       </div>

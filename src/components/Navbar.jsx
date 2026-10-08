@@ -46,7 +46,7 @@ export default function Navbar() {
             href="https://wa.me/6281996307784?text=Hello%20Jipo%20POS%20Team,%20I%20want%20to%20consult%20and%20claim%20free%20setup"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-[0_0_20px_rgba(16,185,129,0.35)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all active:scale-95 btn-glow"
+            className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold shadow-sm hover:shadow transition-all active:scale-95"
           >
             <span>Book Free Setup</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

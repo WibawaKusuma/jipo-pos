@@ -89,17 +89,24 @@ export default function ProblemSolution() {
           </div>
 
           {/* Jipo POS Way Bento Card */}
-          <div className="bg-emerald-50/40 border border-emerald-300 rounded-3xl p-7 sm:p-9 shadow-xl shadow-emerald-600/5 flex flex-col justify-between">
+          <div className="bg-white border border-emerald-300 rounded-3xl p-6 sm:p-8 shadow-xl shadow-emerald-900/5 flex flex-col justify-between overflow-hidden relative">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-600 text-white text-xs font-semibold uppercase tracking-wider mb-6 shadow-sm">
-                <Check className="w-3.5 h-3.5" />
-                <span>With Jipo POS</span>
+              {/* Photo Preview of Happy Customer Handover */}
+              <div className="relative rounded-2xl overflow-hidden mb-6 border border-slate-200 aspect-[16/9]">
+                <img
+                  src="/images/laundry_cashier_customer.jpg"
+                  alt="Friendly laundry cashier handing clean pressed laundry to a happy customer"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                  ✓ The Jipo POS Experience
+                </div>
               </div>
 
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {newWay.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 bg-white p-4 rounded-2xl border border-emerald-200 shadow-2xs">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-xs font-semibold mt-0.5">
+                  <div key={idx} className="flex items-start gap-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80">
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 text-xs font-semibold mt-0.5">
                       ✓
                     </div>
                     <div>
@@ -111,8 +118,8 @@ export default function ProblemSolution() {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-emerald-200 text-xs text-emerald-800 font-medium flex items-center justify-between">
-              <span>✨ Result: 15s checkout & happy loyal customers</span>
+            <div className="mt-6 pt-4 border-t border-slate-200 text-xs text-emerald-800 font-medium flex items-center justify-between">
+              <span>✨ Result: 15s checkout &amp; happy loyal customers</span>
             </div>
           </div>
 
